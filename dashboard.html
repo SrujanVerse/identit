@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdentityMatrix | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-bar">
+            <h1 class="logo">IdentityMatrix</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container dashboard-layout">
+        
+        <aside class="sidebar">
+            <div class="card profile-card">
+                <h3>Test User Profile</h3>
+                <p class="role">Software Engineer</p>
+            </div>
+
+            <div class="card score-card">
+                <h4>Impact Score</h4>
+                <div class="score-value text-blue" id="impactScore">0</div>
+            </div>
+
+            <div class="card score-card">
+                <h4>Reputation Score</h4>
+                <div class="score-value text-green" id="reputationScore">0</div>
+            </div>
+
+            <div class="card score-card">
+                <h4>Career Alignment</h4>
+                <div class="score-value text-purple" id="alignmentScore">0</div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <div class="controls card">
+                <button class="btn" id="refreshBtn">Refresh Data</button>
+                <button class="btn btn-outline" id="csvBtn">Download CSV</button>
+            </div>
+
+            <div class="card">
+                <h3>Analyzed Posts</h3>
+                <table class="data-table" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Platform</th>
+                            <th>Sentiment</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Platform Performance</h3>
+                <div class="chart-container" id="barChart">
+                    </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
